@@ -1,0 +1,351 @@
+:root {
+  --clr-primary-300: #ffeaf1;
+  --clr-primary-400: #f6c4c4;
+  --clr-primary-900: #b57084;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #2f2c23;
+
+  --ff-primary: "Rubik", sans-serif;
+  --ff-accent: "Chicle", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+h2,
+h3 {
+  color: var(--clr-primary-900);
+}
+
+ul > li {
+  list-style: none;
+}
+
+li > i {
+  color: var(--clr-primary-900);
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+.ctn {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#header-container--slim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split--last {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.logo {
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-300);
+  padding: 1rem;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+ul.breadcrumb li {
+  padding: 1rem;
+}
+
+ul.breadcrumb li a {
+  color: var(--clr-primary-400);
+  text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+.nav-container--slim {
+  display: flex;
+  background-color: var(--clr-primary-900);
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  padding-left: 0;
+  top: 22em;
+}
+
+.nav--slim {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.nav a,
+.nav--slim a {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+
+.nav a:hover,
+.nav--slim a:hover,
+.topnav li > a:hover {
+  background-image: linear-gradient(
+    to right,
+    #f2e3e3,
+    #f3dbdb,
+    #f4d4d4,
+    #f5cccc,
+    #f6c4c4
+  );
+  color: var(--clr-neutral-900);
+  transition: 0.3s;
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-900);
+  display: block;
+  right: 0;
+  top: 0;
+  margin-right: 1rem;
+}
+
+.topnav a:hover {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-300);
+}
+
+.title {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  padding: 20px;
+}
+
+.title p {
+  color: #ffe4e4;
+}
+
+.title-sub strong {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.title-sub {
+  margin-bottom: 10px;
+}
+
+.btn {
+  color: #2f4858;
+  background-color: white;
+  border-radius: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.btn-ctn a:hover {
+  background-image: linear-gradient(
+    to right,
+    #f2e3e3,
+    #f3dbdb,
+    #f4d4d4,
+    #f5cccc,
+    #f6c4c4
+  );
+  color: #2f4858;
+  transition: 0.3s;
+}
+
+.photo-background {
+  margin: auto;
+  background-image: url("../images/baby-shower-garland-2.JPG");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /* filter: grayscale(100%); */
+  height: 100%; /* You must set a specified height */
+  width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.contact-ctn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-col {
+  margin: 2em;
+  padding: 3%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 25em;
+  width: 50%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border: none;
+  background: var(--clr-primary-400);
+  color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer > p {
+  color: #2f4858;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #f2e3e3,
+    #f3dbdb,
+    #f4d4d4,
+    #f5cccc,
+    #f6c4c4
+  );
+}
+
+.social {
+  display: flex;
+}
+
+ul.social li a {
+  color: var(--clr-primary-900);
+  text-decoration: none;
+}
